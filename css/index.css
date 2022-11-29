@@ -88,6 +88,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+}
+
+.box2 p{
+    position: relative;
+    top:-10%;
+    font-size: 4rem;
 }
 
 .box2 .chart{
