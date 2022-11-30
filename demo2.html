@@ -4,12 +4,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="css/index.css">
         <style>
-            #menu{
-                position: relative;
-                right: 25%;
+            #demographic{
+                width: 40rem;
+                display: flex;
+                justify-content: space-between;
             }
-            #menu select{
-                width: 7rem;
+            select{
+                width: 8rem;
                 padding: 12px 20px;
                 margin: 8px 0;
                 border: 1px solid rgb(155, 155, 155);
@@ -44,7 +45,7 @@
                 </div>
 
                 <div class="brand-name">
-                    <img src="../images/logo.png" alt="Logo">
+                    <img src="images/logo.png" alt="Logo">
                     <h2>FordaCommute</h2>
                 </div>
             </div>
@@ -52,13 +53,29 @@
 
         <div class="box2">
             <p>Demographics</p>
-            <form id="menu">
-                <select name="demographics" id="options">
-                    <option value="sex">Sex</option>
-                    <option value="age">Age</option>
-                    <option value="status">Status</option>
+            <form id="demographic">
+                <select name="demo" id="options1" onchange="window.location.href=this.value">
+                    <option value="demo.html" >Sex</option>
+                    <option value="demo2.html" selected>Age</option>
+                    <option value="demo3.html">Status</option>
+                </select>
+
+                <select name="date" id="options2">
+                    <option value="jan">January</option>
+                    <option value="feb">February</option>
+                    <option value="mar">March</option>
+                    <option value="april">April</option>
+                    <option value="may">May</option>
+                    <option value="jun">June</option>
+                    <option value="jul">July</option>
+                    <option value="aug">August</option>
+                    <option value="sept">September</option>
+                    <option value="oct">October</option>
+                    <option value="noc">November</option>
+                    <option value="dec">December</option>
                 </select>
             </form>
+
 
             <div class="chart" id="chart">
                 <canvas id="pie"></canvas>
@@ -67,5 +84,6 @@
 
     </body>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="../js/demo1.js"></script>
+
+    <script src="../js/demo2.js"></script>
 </html>

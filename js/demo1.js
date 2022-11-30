@@ -1,8 +1,8 @@
+Chart.defaults.font.size = 25;
 //setup
 const data = {
     labels: ['Female', 'Male', ],
     datasets: [{
-        label: 'My First Dataset',
         data: [142, 136],
         backgroundColor: [
             'rgba(255, 99, 132, 1)',
@@ -11,11 +11,28 @@ const data = {
     }]
 };
 
+//options
+const options = {
+    plugins:{
+        legend: {
+            labels: {
+                font: {
+                    size: 16
+                }
+            }
+        },
+        title:{
+            display: true,
+            text: "Sex"
+        }
+    }
+};
+
 //config
 const config = {
     type: 'pie',
     data: data,
-    devicePixelRatio: false
+    options,
 };
 
 //render init

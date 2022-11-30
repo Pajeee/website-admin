@@ -98,8 +98,8 @@
 }
 
 .box2 .chart{
-    width: 75%;
-    height: 60%;
+    width: 55rem;
+    height: 25rem;
     position: relative;
     top:5%;
     display: flex;
