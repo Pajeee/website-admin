@@ -1,20 +1,40 @@
+Chart.defaults.font.size = 25;
 //setup
 const data = {
-    labels: ['Female', 'Male', ],
+    labels: ['18-24', '25-34', '35-44', '45-54'],
     datasets: [{
-        label: 'My First Dataset',
-        data: [142, 136],
+        data: [22, 53, 14, 10],
         backgroundColor: [
-            'rgba(255, 99, 132, 1)',
-            'rgba(54, 162, 235, 1)',
+            'rgba(194, 248, 38, 1)',
+            'rgba(40, 220, 116, 1)',
+            'rgba(40, 143, 220, 1)',
+            'rgba(244, 167, 45, 1)'
         ],
     }]
+};
+
+//options
+const options = {
+    plugins:{
+        legend: {
+            labels: {
+                font: {
+                    size: 16
+                }
+            }
+        },
+        title:{
+            display: true,
+            text: "Age"
+        }
+    }
 };
 
 //config
 const config = {
     type: 'pie',
     data: data,
+    options,
 };
 
 //render init

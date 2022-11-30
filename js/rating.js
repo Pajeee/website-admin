@@ -3,7 +3,6 @@ Chart.defaults.font.size = 25;
 const data = {
     labels: ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sad', 'Sun'],
         datasets: [{
-            label: 'Number of Ratings',
             data: [12, 19, 3, 5, 2, 3, 14],
             backgroundColor: [
                 'rgba(255, 99, 132, 1)',
@@ -17,27 +16,29 @@ const data = {
         }]
 };
 
+//options
+const options = {
+    plugins: {
+        legend: {
+            display: false,
+        },
+        title:{
+            display: true,
+            text: "Number of Ratings"
+        }
+    },
+    scales: {
+        y: {
+            beginAtZero: true
+        }
+    }
+};
+
 //config
 const config = {
     type: 'bar',
     data: data,
-    
-    options: {
-        plugins: {
-            legend: {
-                labels: {
-                    font: {
-                        size: 25
-                    }
-                }
-            }
-        },
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-    }
+    options
 };
 
 //render init
